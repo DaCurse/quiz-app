@@ -4,18 +4,18 @@ import FormikRadioGroup from '../../Formik/FormikRadioGroup';
 
 export interface QuestionProps {
   question: string;
-  options: string[];
-  correctOption: string;
+  answers: string[];
+  correctAnswer: string;
 }
 
-const Question: React.FC<QuestionProps> = ({ question, options }) => {
-  const optionsToRender = options.map((option) => {
+const Question: React.FC<QuestionProps> = ({ question, answers }) => {
+  const answersToRender = answers.map((answer) => {
     return (
       <FormControlLabel
-        key={option}
-        value={option}
+        key={answer}
+        value={answer}
         control={<Radio />}
-        label={option}
+        label={answer}
       />
     );
   });
@@ -23,7 +23,7 @@ const Question: React.FC<QuestionProps> = ({ question, options }) => {
   return (
     <div>
       <h4>{question}</h4>
-      <FormikRadioGroup name={question}>{optionsToRender}</FormikRadioGroup>
+      <FormikRadioGroup name={question}>{answersToRender}</FormikRadioGroup>
     </div>
   );
 };

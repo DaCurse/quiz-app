@@ -7,13 +7,13 @@ const App: React.FC = () => {
   const questions: QuestionProps[] = [
     {
       question: 'Whats 1+1?',
-      options: ['2', '3', 'Cat', '-1'],
-      correctOption: '2',
+      answers: ['2', '3', 'Cat', '-1'],
+      correctAnswer: '2',
     },
     {
       question: 'Foo',
-      options: ['Bar', 'Baz', 'Qux', 'Another'],
-      correctOption: 'Bar',
+      answers: ['Bar', 'Baz', 'Qux', 'Another'],
+      correctAnswer: 'Bar',
     },
   ];
   return (
