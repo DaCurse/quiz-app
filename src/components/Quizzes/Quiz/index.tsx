@@ -12,8 +12,8 @@ const Quiz: React.FC<QuizProps> = ({ name, questions }) => {
     console.table(values);
   }
 
-  const questionsToRender = questions.map((question, index) => (
-    <Question key={index} {...question} />
+  const questionsToRender = questions.map((question) => (
+    <Question key={question.question} {...question} />
   ));
 
   return (
