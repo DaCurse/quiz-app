@@ -12,8 +12,8 @@ const Quiz: React.FC<QuizProps> = ({ name, questions }) => {
   const [correct, setCorrect] = useState(false);
 
   function handleSubmit(values: FormikValues) {
-    const isCorrect = Object.keys(values).every((key) =>
-      questions.some((q) => q.correctAnswer === values[key])
+    const isCorrect = questions.every(
+      (q) => values[q.question] === q.correctAnswer
     );
     setCorrect(isCorrect);
   }
