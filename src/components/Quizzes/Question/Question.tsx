@@ -1,6 +1,7 @@
 import { FormControlLabel, Radio } from '@material-ui/core';
 import React from 'react';
-import FormikRadioGroup from '../../Formik/FormikRadioGroup';
+import FormikRadioGroup from '../../Formik/FormikRadioGroup/FormikRadioGroup';
+import styles from './Question.module.css';
 
 export interface QuestionProps {
   question: string;
@@ -21,7 +22,7 @@ const Question: React.FC<QuestionProps> = ({ question, answers }) => {
   });
 
   return (
-    <div>
+    <div className={styles.Question}>
       <h4>{question}</h4>
       <FormikRadioGroup name={question}>{answersToRender}</FormikRadioGroup>
     </div>

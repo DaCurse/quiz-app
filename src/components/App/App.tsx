@@ -1,6 +1,6 @@
 import React from 'react';
-import { QuestionProps } from '../Quizzes/Question';
-import Quiz from '../Quizzes/Quiz';
+import { QuestionProps } from '../Quizzes/Question/Question';
+import Quiz from '../Quizzes/Quiz/Quiz';
 import styles from './App.module.css';
 
 const App: React.FC = () => {

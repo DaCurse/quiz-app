@@ -1,7 +1,8 @@
 import { Button } from '@material-ui/core';
 import { Form, Formik, FormikValues } from 'formik';
 import React, { useState } from 'react';
-import Question, { QuestionProps } from '../Question';
+import Question, { QuestionProps } from '../Question/Question';
+import styles from './Quiz.module.css';
 
 export interface QuizProps {
   name: string;
@@ -23,7 +24,7 @@ const Quiz: React.FC<QuizProps> = ({ name, questions }) => {
   ));
 
   return (
-    <div>
+    <div className={styles.Quiz}>
       <h3>{name}</h3>
       <Formik initialValues={{}} onSubmit={handleSubmit}>
         {({ values }) => (

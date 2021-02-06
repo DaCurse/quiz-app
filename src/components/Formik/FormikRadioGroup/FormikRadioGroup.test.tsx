@@ -3,12 +3,12 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Form, Formik } from 'formik';
 import React from 'react';
-import FormikRadioGroup from '.';
+import FormikRadioGroup from './FormikRadioGroup';
 
 it('submits the form with the selected value', async () => {
   const handleSubmit = jest.fn();
   const initialValues = { test: '' };
-  const expectedValues = { test: 'bar ' };
+  const expectedValues = { test: 'bar' };
 
   render(
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
