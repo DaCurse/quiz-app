@@ -3,7 +3,7 @@ import { QuestionProps } from '../Quizzes/Question/Question';
 import Quiz from '../Quizzes/Quiz/Quiz';
 import styles from './App.module.css';
 
-const App: React.FC = () => {
+const App = (): JSX.Element => {
   const questions: QuestionProps[] = [
     {
       question: 'Whats 1+1?',

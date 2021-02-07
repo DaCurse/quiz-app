@@ -2,10 +2,10 @@ import { RadioGroup } from '@material-ui/core';
 import { FieldAttributes, useField } from 'formik';
 import React from 'react';
 
-const FormikRadioGroup: React.FC<FieldAttributes<{}>> = ({
+const FormikRadioGroup = ({
   children,
   ...props
-}) => {
+}: FieldAttributes<{}>): JSX.Element => {
   const [field] = useField({ ...props, type: 'radio' });
 
   return <RadioGroup {...field}>{children}</RadioGroup>;

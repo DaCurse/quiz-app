@@ -9,7 +9,7 @@ export interface QuizProps {
   questions: QuestionProps[];
 }
 
-const Quiz: React.FC<QuizProps> = ({ name, questions }) => {
+const Quiz = ({ name, questions }: QuizProps): JSX.Element => {
   const [correct, setCorrect] = useState(false);
 
   function handleSubmit(values: FormikValues) {

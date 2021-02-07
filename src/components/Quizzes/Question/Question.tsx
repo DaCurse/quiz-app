@@ -9,7 +9,7 @@ export interface QuestionProps {
   correctAnswer: string;
 }
 
-const Question: React.FC<QuestionProps> = ({ question, answers }) => {
+const Question = ({ question, answers }: QuestionProps): JSX.Element => {
   const answersToRender = answers.map((answer) => {
     return (
       <FormControlLabel
