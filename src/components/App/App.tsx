@@ -3,7 +3,7 @@ import { QuestionProps } from '../Quizzes/Question/Question';
 import Quiz from '../Quizzes/Quiz/Quiz';
 import styles from './App.module.css';
 
-const App = (): JSX.Element => {
+function App(): JSX.Element {
   const questions: QuestionProps[] = [
     {
       text: 'Whats 1+1?',
@@ -22,6 +22,6 @@ const App = (): JSX.Element => {
       <Quiz name="A Cool Quiz" questions={questions} />
     </div>
   );
-};
+}
 
 export default App;

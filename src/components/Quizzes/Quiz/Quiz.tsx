@@ -9,7 +9,7 @@ export interface QuizProps {
   questions: QuestionProps[];
 }
 
-const Quiz = ({ name, questions }: QuizProps): JSX.Element => {
+function Quiz({ name, questions }: QuizProps): JSX.Element {
   const [correct, setCorrect] = useState(false);
 
   function handleSubmit(values: FormikValues) {
@@ -40,6 +40,6 @@ const Quiz = ({ name, questions }: QuizProps): JSX.Element => {
       </Formik>
     </div>
   );
-};
+}
 
 export default Quiz;

@@ -9,7 +9,7 @@ export interface QuestionProps {
   correctAnswer: string;
 }
 
-const Question = ({ text, answers }: QuestionProps): JSX.Element => {
+function Question({ text, answers }: QuestionProps): JSX.Element {
   const answersToRender = answers.map((answer) => {
     return (
       <FormControlLabel
@@ -27,6 +27,6 @@ const Question = ({ text, answers }: QuestionProps): JSX.Element => {
       <FormikRadioGroup name={text}>{answersToRender}</FormikRadioGroup>
     </div>
   );
-};
+}
 
 export default Question;
