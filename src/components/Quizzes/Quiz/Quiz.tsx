@@ -14,13 +14,13 @@ const Quiz = ({ name, questions }: QuizProps): JSX.Element => {
 
   function handleSubmit(values: FormikValues) {
     const isCorrect = questions.every(
-      (q) => values[q.question] === q.correctAnswer
+      (q) => values[q.text] === q.correctAnswer
     );
     setCorrect(isCorrect);
   }
 
   const questionsToRender = questions.map((question) => (
-    <Question key={question.question} {...question} />
+    <Question key={question.text} {...question} />
   ));
 
   return (

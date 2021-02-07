@@ -4,12 +4,12 @@ import FormikRadioGroup from '../../Formik/FormikRadioGroup/FormikRadioGroup';
 import styles from './Question.module.css';
 
 export interface QuestionProps {
-  question: string;
+  text: string;
   answers: string[];
   correctAnswer: string;
 }
 
-const Question = ({ question, answers }: QuestionProps): JSX.Element => {
+const Question = ({ text, answers }: QuestionProps): JSX.Element => {
   const answersToRender = answers.map((answer) => {
     return (
       <FormControlLabel
@@ -23,8 +23,8 @@ const Question = ({ question, answers }: QuestionProps): JSX.Element => {
 
   return (
     <div className={styles.Question}>
-      <h4>{question}</h4>
-      <FormikRadioGroup name={question}>{answersToRender}</FormikRadioGroup>
+      <h4>{text}</h4>
+      <FormikRadioGroup name={text}>{answersToRender}</FormikRadioGroup>
     </div>
   );
 };

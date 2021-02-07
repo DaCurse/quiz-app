@@ -6,12 +6,12 @@ import styles from './App.module.css';
 const App = (): JSX.Element => {
   const questions: QuestionProps[] = [
     {
-      question: 'Whats 1+1?',
+      text: 'Whats 1+1?',
       answers: ['2', '3', 'Cat', '-1'],
       correctAnswer: '2',
     },
     {
-      question: 'Foo',
+      text: 'Foo',
       answers: ['Bar', 'Baz', 'Qux', 'Another'],
       correctAnswer: 'Bar',
     },
