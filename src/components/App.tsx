@@ -1,10 +1,10 @@
 import React from 'react';
-import { QuestionProps } from '../Quizzes/Question/Question';
-import Quiz from '../Quizzes/Quiz/Quiz';
-import styles from './App.module.css';
+import styles from '../assets/App.module.css';
+import { QuestionData } from '../interfaces/question.interface';
+import Quiz from './Quizzes/Quiz';
 
 function App(): JSX.Element {
-  const questions: QuestionProps[] = [
+  const questions: QuestionData[] = [
     {
       text: 'Whats 1+1?',
       answers: ['2', '3', 'Cat', '-1'],

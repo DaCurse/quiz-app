@@ -1,15 +1,11 @@
 import { Button } from '@material-ui/core';
 import { Form, Formik, FormikValues } from 'formik';
 import React, { useState } from 'react';
-import Question, { QuestionProps } from '../Question/Question';
+import { QuizData } from '../../interfaces/quiz.interface';
+import Question from './Question';
 import styles from './Quiz.module.css';
 
-export interface QuizProps {
-  name: string;
-  questions: QuestionProps[];
-}
-
-function Quiz({ name, questions }: QuizProps): JSX.Element {
+function Quiz({ name, questions }: QuizData): JSX.Element {
   const [correct, setCorrect] = useState(false);
 
   function handleSubmit(values: FormikValues) {

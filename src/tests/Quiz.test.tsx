@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { QuestionProps } from '../Question/Question';
-import Quiz from './Quiz';
+import Quiz from '../components/Quizzes/Quiz';
+import { QuestionData } from '../interfaces/question.interface';
 
 it('should render all the questions and their answers', () => {
-  const questions: QuestionProps[] = [
+  const questions: QuestionData[] = [
     {
       text: 'Whats 1+1?',
       answers: ['2', '3', 'Cat', '-1'],

@@ -3,7 +3,7 @@ import { blue, lightBlue } from '@material-ui/core/colors';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/index.css';
-import App from './components/App/App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 const theme = createMuiTheme({

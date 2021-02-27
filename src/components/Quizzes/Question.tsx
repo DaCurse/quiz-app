@@ -1,15 +1,10 @@
 import { FormControlLabel, Radio } from '@material-ui/core';
 import React from 'react';
-import FormikRadioGroup from '../../Formik/FormikRadioGroup/FormikRadioGroup';
+import { QuestionData } from '../../interfaces/question.interface';
+import FormikRadioGroup from '../Formik/FormikRadioGroup';
 import styles from './Question.module.css';
 
-export interface QuestionProps {
-  text: string;
-  answers: string[];
-  correctAnswer: string;
-}
-
-function Question({ text, answers }: QuestionProps): JSX.Element {
+function Question({ text, answers }: QuestionData): JSX.Element {
   const answersToRender = answers.map((answer) => {
     return (
       <FormControlLabel
